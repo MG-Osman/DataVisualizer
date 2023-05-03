@@ -8,7 +8,7 @@ MG visualizer is a simple GUI application that allows you to create different ki
 
 ## Requirements
 
-- Python 3.x
+- Python 3+
 - matplotlib
 - numpy
 - ast
