@@ -47,3 +47,7 @@ This program is a simple demonstration of how to create custom data visualizatio
 - Add a file browser or a drag-and-drop feature for the user to select the file name and location to save the chart.
 - Add a preview feature for the user to see the chart before saving it.
 - Add a help or tutorial feature for the user to learn how to use the program and enter the data correctly.
+
+[![MG-Osman's GitHub stats](https://github-readme-stats.vercel.app/api?username=MG-Osman&show_icons=true&theme=radical)](https://github.com/MG-Osman)
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=MG-Osman&layout=compact&theme=radical)](https://github.com/MG-Osman)
