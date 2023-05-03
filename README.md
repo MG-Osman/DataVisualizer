@@ -1,10 +1,12 @@
-# Custom Data Visualization
+# MG Visualizer
 
-This is a Python program that uses matplotlib to create custom data visualizations based on the user input. The program asks the user to enter the data for the x and y values, the type of chart they want to create (line, bar, scatter, hist or pie), and the labels and title for the chart. The program also asks the user to enter a file name to save the chart as an image file. The program then uses the create_chart() function to plot the data and show the chart on the screen. The program handles any errors or invalid inputs from the user.
+![Python](https://img.shields.io/badge/Python-3.9-blue)
+![matplotlib](https://img.shields.io/badge/matplotlib-3.5.1-green)
+![tkinter](https://img.shields.io/badge/tkinter-8.6-red)
+
+MG visualizer is a simple GUI application that allows you to create different kinds of charts with matplotlib and save them as PNG files.
 
 ## Requirements
-
-To run this program, you will need:
 
 - Python 3.x
 - matplotlib
@@ -15,30 +17,32 @@ To run this program, you will need:
 ## Usage
 
 To run this program, you can use any IDE or editor that supports Python, or run it from the command line. When you run the program, you will see a GUI window with the input widgets and a button to create the chart like this one:
-![GUIwindow](https://user-images.githubusercontent.com/58115228/235950594-0d913cae-0e70-4401-921f-1f8aab170738.png)
+![image](https://user-images.githubusercontent.com/58115228/235965791-f7b75bb3-ff79-4526-a423-1c4260993d24.png)
 
 Enter your data and preferences in the corresponding fields and click on the button. You will see your custom chart on the screen and also saved as an image file in your directory.
 
 Here are some examples of charts that you can create with this program:
+![bar](https://user-images.githubusercontent.com/58115228/235964931-08df0bce-09ba-49c0-988b-b32777c265f7.png)
 
-## Code Explanation
+![line](https://user-images.githubusercontent.com/58115228/235965015-467a8c4b-6cc3-4a3f-8882-5146bae55636.png)
 
-The code consists of two main parts: a function to create a custom chart and a GUI to get the user input.
+![scatter](https://user-images.githubusercontent.com/58115228/235965057-96664dd6-045b-4a69-99f5-bded3729cfd0.png)
 
-The create_chart() function takes six parameters: x, y, kind, xlabel, ylabel, title, and filename. The x and y parameters are lists or arrays of data values for the x and y axes. The kind parameter is a string that specifies the type of chart to create (line, bar, scatter, hist or pie). The xlabel and ylabel parameters are strings that specify the labels for the x and y axes. The title parameter is a string that specifies the title for the chart. The filename parameter is a string that specifies the file name to save the chart as an image file.
 
-The function creates a figure and an axis object using plt.subplots(). Then it checks the kind parameter and plots the data accordingly using different methods from matplotlib. For example, if kind is "line", it uses ax.plot(data) to create a line chart. It also sets the title and labels for the axis using ax.set_title(), ax.set_xlabel(), and ax.set_ylabel(). If kind is "pie", it also adds a legend using ax.legend(). Finally, it saves the figure as an image file using fig.savefig() and shows it on the screen using plt.show().
 
-The GUI part uses tkinter to create a root window and a frame to hold the input widgets. It creates labels and entries for each parameter of the create_chart() function using tk.Label() and tk.Entry(). It also inserts some example inputs in each entry using entry.insert(). It creates a button to submit the user input using tk.Button() and assigns it a command to call a function called get_input(). It also creates a label to display any errors using tk.Label().
+## Features
 
-The get_input() function tries to get the user input from each entry using entry.get() and convert it to the appropriate data type using ast.literal_eval(). If there is any exception, it displays it in the error label using label_error.config(). Otherwise, it clears the error label and calls the create_chart() function with the user input.
+- You can choose from four types of charts: line, bar, scatter and histogram.
+- You can enter the x and y values as lists or arrays.
+- You can customize the x and y axis labels and the chart title.
+- You can enter the file name to save the chart.
 
 ## Future Improvements
 
 This program is a simple demonstration of how to create custom data visualizations using matplotlib and tkinter. There are many ways to improve it and add more features. For example, you can:
 
 - Add more options for the user to customize the chart elements, such as color, size, style, etc.
-- Add more types of charts that matplotlib supports, such as boxplot, contour, heatmap, etc.
+- Add more types of charts that matplotlib supports, such as boxplot, pie chart, heatmap, etc.
 - Add validation and error handling for the user input, such as checking if the data is valid, if the file name is unique, etc.
 - Add a file browser or a drag-and-drop feature for the user to select the file name and location to save the chart.
 - Add a preview feature for the user to see the chart before saving it.
